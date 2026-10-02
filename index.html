@@ -4,35 +4,94 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Calculadora de facturación: ¿cuánto facturar para ganar? | MargenLab</title>
+<title>¿Cuánto tengo que facturar para ganar dinero? | MargenLab</title>
 
-<meta name="description" content="Calcula cuánto necesitas facturar y cuántas ventas necesitas para alcanzar tu beneficio mensual objetivo, teniendo en cuenta gastos, costes variables y CAC.">
-<meta name="robots" content="index,follow">
+<meta name="description" content="Calcula cuánto tienes que facturar y cuántas ventas necesitas para alcanzar tu beneficio mensual. Calculadora gratuita de facturación, margen, costes y CAC.">
+
+<meta name="robots" content="index, follow">
+
 <link rel="canonical" href="https://margenlab.github.io/MARGEN-LAB/">
 
-<meta property="og:title" content="Calculadora de facturación | MargenLab">
-<meta property="og:description" content="Calcula ventas y facturación necesarias para alcanzar tu beneficio mensual objetivo.">
+<meta property="og:title" content="¿Cuánto tengo que facturar para ganar dinero? | MargenLab">
+<meta property="og:description" content="Descubre cuánto necesitas facturar y cuántas ventas necesitas para alcanzar tu objetivo de beneficio mensual.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://margenlab.github.io/MARGEN-LAB/">
+<meta property="og:site_name" content="MargenLab">
+<meta property="og:locale" content="es_ES">
 
 <meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="¿Cuánto tengo que facturar para ganar dinero? | MargenLab">
+<meta name="twitter:description" content="Calcula tus ventas y facturación necesarias para alcanzar tu beneficio mensual objetivo.">
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111'/%3E%3Cpath d='M14 46V18l18 20 18-20v28' fill='none' stroke='%23fff' stroke-width='6' stroke-linejoin='round'/%3E%3C/svg%3E">
 
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"WebApplication",
-  "name":"MargenLab",
-  "url":"https://margenlab.github.io/MARGEN-LAB/",
-  "applicationCategory":"BusinessApplication",
-  "operatingSystem":"Any",
-  "description":"Calculadora gratuita de facturación y ventas necesarias para alcanzar un beneficio mensual objetivo.",
-  "offers":{
-    "@type":"Offer",
-    "price":"0",
-    "priceCurrency":"EUR"
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "MargenLab",
+  "url": "https://margenlab.github.io/MARGEN-LAB/",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "Business Calculator",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript",
+  "description": "Calculadora gratuita para saber cuánto hay que facturar y cuántas ventas son necesarias para alcanzar un beneficio mensual objetivo.",
+  "inLanguage": "es",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
   }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué son los gastos fijos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Son los gastos que normalmente debes pagar independientemente del número de ventas, como alquiler, software, gestoría, seguros, cuota de autónomo y otros gastos similares."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué son los costes variables?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Son los costes que aumentan cuando realizas más ventas, como materiales, envíos, comisiones de plataformas o subcontratas. Se expresan como porcentaje del precio de venta."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué es el CAC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El CAC o coste de adquisición de cliente es lo que gastas de media para conseguir un cliente nuevo. Puede incluir publicidad, comisiones comerciales y otros gastos de captación."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Debo introducir los precios con IVA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. MargenLab trabaja con importes sin IVA. Si tu precio al consumidor es 121 euros con un IVA del 21 por ciento, el precio utilizado para el cálculo sería 100 euros."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿El beneficio objetivo incluye impuestos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. El beneficio objetivo es antes de impuestos. La herramienta no calcula IRPF, impuesto de sociedades ni cotizaciones que dependan de tus ingresos."
+      }
+    }
+  ]
 }
 </script>
 
@@ -413,9 +472,9 @@ Calculadora empresarial gratuita
 </h1>
 
 <p>
-Indica cuánto quieres ganar al mes y cuánto te cuesta tu actividad.
-Te diremos cuántas ventas necesitas y cuánto tienes que facturar,
-contando gastos fijos, costes variables y el coste de adquisición de clientes.
+Calcula cuánto tienes que facturar y cuántas ventas necesitas para alcanzar
+tu beneficio mensual objetivo. Introduce tus gastos fijos, costes variables,
+precio medio por venta y coste de adquisición de clientes (CAC).
 </p>
 
 </section>
@@ -535,6 +594,7 @@ Si trabajas con precios al consumidor con IVA, conviértelos primero.
 <div class="err" id="e-precio" role="alert"></div>
 
 </div>
+
 <div class="field">
 
 <label for="cac">
@@ -557,7 +617,6 @@ Si no inviertes en captación, escribe 0.
 <div class="err" id="e-cac" role="alert"></div>
 
 </div>
-
 
 <div class="field">
 
@@ -583,7 +642,6 @@ Así el CAC se reparte entre sus compras.
 
 </div>
 
-
 <div class="field">
 
 <label for="iva">
@@ -607,7 +665,6 @@ El cálculo principal se hace sin IVA. Para actividades sin IVA, usa 0.
 <div class="err" id="e-iva" role="alert"></div>
 
 </div>
-
 
 <button type="submit" class="main">
 Calcular
@@ -657,7 +714,7 @@ No incluye impuestos sobre el beneficio ni cotizaciones que dependan de tus ingr
 <section class="info" aria-labelledby="t-intro">
 
 <h2 id="t-intro">
-Por qué conviene calcular tu facturación objetivo
+¿Por qué conviene calcular cuánto tienes que facturar?
 </h2>
 
 <p>
@@ -672,13 +729,20 @@ MargenLab parte del beneficio que quieres conseguir y calcula cuántas ventas
 necesitas según tu precio, tus costes y la frecuencia de compra de tus clientes.
 </p>
 
+<p>
+Esta calculadora puede ayudarte a responder preguntas como:
+<strong>¿cuánto tengo que facturar para ganar 2.000 € al mes?</strong>,
+<strong>¿cuántas ventas necesito para conseguir 3.000 € de beneficio?</strong>
+o <strong>¿qué facturación necesito para cubrir mis gastos?</strong>
+</p>
+
 </section>
 
 
 <section class="info" aria-labelledby="t-calc">
 
 <h2 id="t-calc">
-Cómo se calcula
+¿Cómo se calcula la facturación necesaria?
 </h2>
 
 <ol>
@@ -746,7 +810,7 @@ hacen falta <b>36 ventas</b>, es decir,
 <section class="info" aria-labelledby="t-faq">
 
 <h2 id="t-faq">
-Preguntas frecuentes
+Preguntas frecuentes sobre facturación y beneficios
 </h2>
 
 <details>
@@ -876,9 +940,12 @@ a ningún servidor.
 
 
 <footer>
-© 2026 MargenLab · Herramienta gratuita de estimación empresarial.
+
+© 2026 MargenLab · Calculadora gratuita de facturación y beneficios.
 No constituye asesoramiento financiero, fiscal ni legal.
-</footer><script>
+
+</footer>
+<script>
 (function(){
 "use strict";
 
