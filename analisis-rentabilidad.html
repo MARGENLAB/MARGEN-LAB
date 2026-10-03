@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Análisis de rentabilidad para autónomos y negocios | MARGEN LAB</title>
+
+<meta name="description" content="Analizamos la rentabilidad de tu negocio y calculamos margen, beneficio, punto de equilibrio y facturación necesaria para alcanzar tus objetivos.">
+
+<meta name="robots" content="index,follow">
+
+<link rel="canonical" href="https://margenlab.github.io/MARGEN-LAB/analisis-rentabilidad.html">
+
+<meta property="og:title" content="Análisis de rentabilidad | MARGEN LAB">
+<meta property="og:description" content="Entiende cuánto ganas realmente y cuánto necesitas facturar para alcanzar tus objetivos.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://margenlab.github.io/MARGEN-LAB/analisis-rentabilidad.html">
+
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111'/%3E%3Cpath d='M14 46V18l18 20 18-20v28' fill='none' stroke='%23fff' stroke-width='6' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+
+<!-- GOOGLE ANALYTICS -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BNDN5WRY9P"></script>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+
+function gtag(){
+  dataLayer.push(arguments);
+}
+
+gtag('js', new Date());
+gtag('config', 'G-BNDN5WRY9P');
+</script>
+
+
+<!-- DATOS ESTRUCTURADOS -->
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Service",
+  "name":"Análisis de rentabilidad MARGEN LAB",
+  "provider":{
+    "@type":"Organization",
+    "name":"MARGEN LAB"
+  },
+  "description":"Servicio de análisis de rentabilidad para autónomos y pequeños negocios.",
+  "offers":{
+    "@type":"Offer",
+    "price":"39",
+    "priceCurrency":"EUR"
+  }
+}
+</script>
+
+
+<style>
+
+:root{
+  --bg:#F5F7F8;
+  --surface:#fff;
+  --ink:#15212B;
+  --muted:#5B6975;
+  --line:#DCE3E8;
+  --accent:#0E6B64;
+  --accent-soft:#E3F2F0;
+  --serif:"Iowan Old Style","Palatino Linotype",Georgia,serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font:16px/1.6 var(--sans);
+}
+
+a{
+  color:var(--accent);
+}
+
+:focus-visible{
+  outline:3px solid #2B8F86;
+  outline-offset:2px;
+}
+
+.wrap{
+  max-width:1040px;
+  margin:0 auto;
+  padding:0 20px;
+}
+
+
+/* HEADER */
+
+header{
+  background:#fff;
+  border-bottom:1px solid var(--line);
+  padding:18px 0;
+}
+
+.brand{
+  font-weight:700;
+  font-size:1.1rem;
+}
+
+.brand span{
+  color:var(--accent);
+}
+
+.back{
+  margin-left:22px;
+  font-size:.9rem;
+  text-decoration:none;
+}
+
+
+/* HERO */
+
+.hero{
+  max-width:780px;
+  padding:70px 0 35px;
+}
+
+.hero h1{
+  font:600 clamp(2.2rem,6vw,3.6rem)/1.1 var(--serif);
+  letter-spacing:-.03em;
+  margin:0 0 20px;
+}
+
+.hero p{
+  color:var(--muted);
+  font-size:1.1rem;
+  max-width:680px;
+}
+
+
+/* CTA */
+
+.cta{
+  display:inline-block;
+  background:var(--accent);
+  color:#fff;
+  text-decoration:none;
+  padding:13px 20px;
+  border-radius:9px;
+  font-weight:700;
+  margin-top:10px;
+}
+
+.cta:hover{
+  opacity:.92;
+}
+
+
+/* PRICE */
+
+.price-box{
+  margin:25px 0 55px;
+  background:#15212B;
+  color:#fff;
+  border-radius:16px;
+  padding:30px;
+  max-width:720px;
+}
+
+.price-box .label{
+  color:#BFC9D0;
+  font-size:.9rem;
+}
+
+.price{
+  font:600 3rem/1.1 var(--serif);
+  margin:5px 0;
+}
+
+.price-box p{
+  color:#D5DDE2;
+  margin:8px 0 20px;
+}
+
+
+/* SECTIONS */
+
+section{
+  max-width:760px;
+  margin-bottom:55px;
+}
+
+section h2{
+  font:600 1.7rem/1.25 var(--serif);
+  margin:0 0 14px;
+}
+
+section p{
+  margin:0 0 14px;
+}
+
+
+/* BENEFITS */
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+  margin-top:22px;
+}
+
+.card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:20px;
+}
+
+.card h3{
+  margin:0 0 7px;
+  font-size:1rem;
+}
+
+.card p{
+  color:var(--muted);
+  font-size:.92rem;
+  margin:0;
+}
+
+
+/* PROCESS */
+
+.steps{
+  counter-reset:step;
+}
+
+.step{
+  position:relative;
+  padding:18px 0 18px 54px;
+  border-bottom:1px solid var(--line);
+}
+
+.step::before{
+  counter-increment:step;
+  content:counter(step);
+  position:absolute;
+  left:0;
+  top:17px;
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  background:var(--accent-soft);
+  color:var(--accent);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+}
+
+.step strong{
+  display:block;
+  margin-bottom:3px;
+}
+
+
+/* INCLUDED */
+
+.list{
+  padding:0;
+  margin:20px 0;
+  list-style:none;
+}
+
+.list li{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:9px;
+  padding:13px 15px;
+  margin-bottom:9px;
+}
+
+.list li::before{
+  content:"✓";
+  color:var(--accent);
+  font-weight:700;
+  margin-right:9px;
+}
+
+
+/* FINAL CTA */
+
+.final{
+  background:var(--accent-soft);
+  border-radius:16px;
+  padding:30px;
+}
+
+.final h2{
+  margin-bottom:10px;
+}
+
+
+/* DISCLAIMER */
+
+.disclaimer{
+  color:var(--muted);
+  font-size:.82rem;
+  margin-top:20px;
+}
+
+
+/* FOOTER */
+
+footer{
+  border-top:1px solid var(--line);
+  background:#fff;
+  color:var(--muted);
+  padding:28px 0 40px;
+  font-size:.85rem;
+}
+
+.footer-links{
+  margin-top:8px;
+}
+
+.footer-links a{
+  margin-right:15px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero{
+    padding-top:48px;
+  }
+
+  .price{
+    font-size:2.5rem;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+  <div class="wrap">
+
+    <span class="brand">
+      Margen<span>Lab</span>
+    </span>
+
+    <a
+      class="back"
+      href="index.html"
+    >
+      ← Volver a la calculadora
+    </a>
+
+  </div>
+
+</header>
+
+
+<main class="wrap">
+
+
+  <!-- HERO -->
+
+  <div class="hero">
+
+    <h1>
+      Descubre cuánto ganas realmente con tu negocio
+    </h1>
+
+    <p>
+      Un análisis sencillo de tus números para saber cuánto necesitas
+      facturar, cuál es tu margen y dónde está realmente la rentabilidad
+      de tu negocio.
+    </p>
+
+    <a
+      class="cta"
+      href="#solicitar"
+      onclick="trackServiceClick()"
+    >
+      Solicitar análisis
+    </a>
+
+  </div>
+
+
+  <!-- PRECIO -->
+
+  <div class="price-box">
+
+    <div class="label">
+      Precio de lanzamiento
+    </div>
+
+    <div class="price">
+      39 €
+    </div>
+
+    <p>
+      Un análisis claro y personalizado para entender mejor tus números.
+    </p>
+
+    <a
+      class="cta"
+      href="#solicitar"
+      onclick="trackServiceClick()"
+    >
+      Quiero analizar mi negocio
+    </a>
+
+  </div>
+
+
+  <!-- QUÉ OBTIENES -->
+
+  <section>
+
+    <h2>
+      ¿Qué vamos a analizar?
+    </h2>
+
+    <p>
+      Partimos de los datos básicos de tu actividad para transformar
+      tus números en información fácil de entender.
+    </p>
+
+
+    <div class="grid">
+
+      <div class="card">
+
+        <h3>
+          Facturación necesaria
+        </h3>
+
+        <p>
+          Calculamos cuánto necesitas facturar para alcanzar el beneficio
+          mensual que buscas.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>
+          Margen
+        </h3>
+
+        <p>
+          Analizamos cuánto te queda realmente de cada venta después
+          de los costes variables.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>
+          Punto de equilibrio
+        </h3>
+
+        <p>
+          Estimamos cuánto necesitas vender para cubrir tus principales
+          gastos antes de empezar a generar beneficio.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>
+          Objetivo de ventas
+        </h3>
+
+        <p>
+          Calculamos cuántas ventas necesitas conseguir para alcanzar
+          tus objetivos.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- QUÉ INCLUYE -->
+
+  <section>
+
+    <h2>
+      ¿Qué incluye el análisis?
+    </h2>
+
+    <ul class="list">
+
+      <li>
+        Revisión de los datos económicos que nos facilites.
+      </li>
+
+      <li>
+        Cálculo de margen y rentabilidad.
+      </li>
+
+      <li>
+        Estimación de facturación necesaria.
+      </li>
+
+      <li>
+        Cálculo de ventas necesarias.
+      </li>
+
+      <li>
+        Análisis del punto de equilibrio.
+      </li>
+
+      <li>
+        Observaciones sobre los principales puntos a mejorar.
+      </li>
+
+      <li>
+        Resumen final con los resultados principales.
+      </li>
+
+    </ul>
+
+  </section>
+
+
+  <!-- PROCESO -->
+
+  <section>
+
+    <h2>
+      ¿Cómo funciona?
+    </h2>
+
+
+    <div class="steps">
+
+      <div class="step">
+
+        <strong>
+          Nos facilitas tus datos
+        </strong>
+
+        Nos proporcionas la información básica de tu actividad,
+        como ventas, costes y objetivo de beneficio.
+
+      </div>
+
+
+      <div class="step">
+
+        <strong>
+          Analizamos tus números
+        </strong>
+
+        Aplicamos los cálculos necesarios para conocer tu margen,
+        facturación objetivo y punto de equilibrio.
+
+      </div>
+
+
+      <div class="step">
+
+        <strong>
+          Recibes el resultado
+        </strong>
+
+        Te entregamos un resumen claro con los principales resultados
+        de tu análisis.
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PARA QUIÉN -->
+
+  <section>
+
+    <h2>
+      ¿Para quién está pensado?
+    </h2>
+
+    <p>
+      Este servicio está pensado especialmente para autónomos,
+      pequeños negocios y personas que están empezando una actividad
+      y quieren entender mejor sus números.
+    </p>
+
+    <p>
+      No necesitas tener conocimientos avanzados de contabilidad
+      o finanzas para entender el análisis.
+    </p>
+
+  </section>
+
+
+  <!-- CTA FINAL -->
+
+  <section
+    class="final"
+    id="solicitar"
+  >
+
+    <h2>
+      ¿Quieres saber cuánto necesitas facturar?
+    </h2>
+
+    <p>
+      Si quieres que analicemos tus números, escríbenos y te indicaremos
+      los siguientes pasos.
+    </p>
+
+
+    <!--
+      TEMPORALMENTE USAMOS EMAIL.
+
+      Cuando validemos la demanda podremos sustituir este botón
+      por un formulario y posteriormente por un sistema de pago.
+    -->
+
+    <a
+      class="cta"
+      href="mailto:margenlab@gmail.com?subject=Solicitud%20de%20an%C3%A1lisis%20de%20rentabilidad"
+      onclick="trackServiceRequest()"
+    >
+      Solicitar análisis
+    </a>
+
+
+    <p class="disclaimer">
+      El servicio ofrece un análisis orientativo de los datos facilitados.
+      No constituye asesoramiento financiero, fiscal, contable ni legal.
+    </p>
+
+  </section>
+
+
+</main>
+
+
+<footer>
+
+  <div class="wrap">
+
+    © 2026 MARGEN LAB · Análisis y herramientas de rentabilidad.
+
+    <div class="footer-links">
+
+      <a href="index.html">
+        Calculadora
+      </a>
+
+      <a href="index.html#servicios">
+        Servicios
+      </a>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+/*
+  MEDICIÓN DE CLICS CON GOOGLE ANALYTICS
+*/
+
+function trackServiceClick(){
+
+  if(typeof gtag === "function"){
+
+    gtag(
+      "event",
+      "service_cta_click",
+      {
+        event_category:"servicios",
+        event_label:"Solicitar análisis"
+      }
+    );
+
+  }
+
+}
+
+
+function trackServiceRequest(){
+
+  if(typeof gtag === "function"){
+
+    gtag(
+      "event",
+      "service_request",
+      {
+        event_category:"servicios",
+        event_label:"Solicitud análisis rentabilidad"
+      }
+    );
+
+  }
+
+}
+
+</script>
+
+
+</body>
+</html>
