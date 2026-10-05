@@ -3,64 +3,50 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <title>Calculadora de facturación y rentabilidad | MARGEN LAB</title>
-
 <meta name="description" content="Calcula cuánto necesitas facturar para conseguir el beneficio que quieres. Descubre tu margen, punto de equilibrio y ventas necesarias con MARGEN LAB.">
-
 <meta name="robots" content="index,follow">
-<link rel="canonical" href="https://margenlab.github.io/MARGEN-LAB/">
-
+<!-- DOMINIO PRINCIPAL -->
+<link rel="canonical" href="https://margenlab.es/">
 <meta property="og:title" content="Calculadora de facturación y rentabilidad | MARGEN LAB">
 <meta property="og:description" content="Calcula cuánto necesitas facturar para alcanzar tu beneficio objetivo.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://margenlab.github.io/MARGEN-LAB/">
-
+<meta property="og:url" content="https://margenlab.es/">
 <meta name="twitter:card" content="summary">
-
+<meta name="twitter:title" content="Calculadora de facturación y rentabilidad | MARGEN LAB">
+<meta name="twitter:description" content="Calcula cuánto necesitas facturar para alcanzar tu beneficio objetivo.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111'/%3E%3Cpath d='M14 46V18l18 20 18-20v28' fill='none' stroke='%23fff' stroke-width='6' stroke-linejoin='round'/%3E%3C/svg%3E">
-
 <!-- =========================================================
      GOOGLE ANALYTICS
      ========================================================= -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BNDN5WRY9P"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-
-  function gtag(){
-    dataLayer.push(arguments);
-  }
-
-  gtag('js', new Date());
-  gtag('config', 'G-BNDN5WRY9P');
+window.dataLayer = window.dataLayer || [];
+function gtag(){
+  dataLayer.push(arguments);
+}
+gtag('js', new Date());
+gtag('config', 'G-BNDN5WRY9P');
 </script>
 <!-- FIN GOOGLE ANALYTICS -->
-
-
 <!-- =========================================================
      GOOGLE ADSENSE
      
-     IMPORTANTE:
-     Cuando Google AdSense te proporcione tu código ca-pub-,
-     lo colocaremos aquí.
-
-     NO inventamos todavía el código.
+     Se añadirá aquí el código oficial proporcionado por Google
+     cuando la cuenta esté preparada.
      ========================================================= -->
-
 <!--
 <script async
-src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXX"
+src="https://pagead2.googlesyndication.com/pagead/js?id=ca-pub-XXXXXXXXXXXXXXX"
 crossorigin="anonymous"></script>
 -->
-
-
 <!-- DATOS ESTRUCTURADOS -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
   "@type":"WebApplication",
   "name":"MARGEN LAB",
-  "url":"https://margenlab.github.io/MARGEN-LAB/",
+  "url":"https://margenlab.es/",
   "applicationCategory":"BusinessApplication",
   "operatingSystem":"Any",
   "description":"Calculadora gratuita de facturación, margen y ventas necesarias para alcanzar un beneficio mensual objetivo.",
@@ -71,10 +57,7 @@ crossorigin="anonymous"></script>
   }
 }
 </script>
-
-
 <style>
-
 :root{
   --bg:#F5F7F8;
   --surface:#fff;
@@ -85,83 +68,63 @@ crossorigin="anonymous"></script>
   --accent-soft:#E3F2F0;
   --warn:#A8321F;
   --warn-soft:#FBEAE6;
-
   --serif:"Iowan Old Style","Palatino Linotype",Georgia,serif;
   --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
 }
-
 *{
   box-sizing:border-box;
 }
-
 html{
   scroll-behavior:smooth;
 }
-
 body{
   margin:0;
   background:var(--bg);
   color:var(--ink);
   font:16px/1.6 var(--sans);
 }
-
 a{
   color:var(--accent);
 }
-
 :focus-visible{
   outline:3px solid #2B8F86;
   outline-offset:2px;
 }
-
 .wrap{
   max-width:1040px;
   margin:0 auto;
   padding:0 20px;
 }
-
-
 /* HEADER */
-
 header.top{
   padding:18px 0;
   border-bottom:1px solid var(--line);
   background:var(--surface);
 }
-
 .brand{
   font-weight:700;
   letter-spacing:-.01em;
   font-size:1.1rem;
 }
-
 .brand span{
   color:var(--accent);
 }
-
-
 /* HERO */
-
 .hero{
   padding:44px 0 28px;
   max-width:760px;
 }
-
 h1{
   font:600 clamp(1.9rem,5vw,2.9rem)/1.15 var(--serif);
   letter-spacing:-.02em;
   margin:0 0 14px;
 }
-
 .hero p{
   color:var(--muted);
   font-size:1.08rem;
   margin:0;
 }
-
-
 /* AD SLOT */
-
 .ad-slot{
   min-height:90px;
   margin:12px 0 30px;
@@ -171,62 +134,50 @@ h1{
   color:#8A959D;
   font-size:.78rem;
 }
-
 .ad-slot span{
   display:none;
 }
-
-
 /* CALCULATOR */
-
 .tool{
   display:grid;
   gap:20px;
   grid-template-columns:1fr;
   margin-bottom:48px;
 }
-
 @media(min-width:880px){
   .tool{
     grid-template-columns:5fr 6fr;
     align-items:start;
   }
 }
-
 .panel{
   background:var(--surface);
   border:1px solid var(--line);
   border-radius:14px;
   padding:24px;
 }
-
 .panel h2{
   font-size:1.05rem;
   margin:0 0 18px;
 }
-
 .field{
   margin-bottom:16px;
 }
-
 .field label{
   display:block;
   font-weight:600;
   font-size:.93rem;
   margin-bottom:4px;
 }
-
 .field .hint{
   display:block;
   font-weight:400;
   color:var(--muted);
   font-size:.82rem;
 }
-
 .inp{
   position:relative;
 }
-
 .inp input{
   width:100%;
   padding:11px 44px 11px 12px;
@@ -236,13 +187,11 @@ h1{
   background:#fff;
   color:var(--ink);
 }
-
 .inp input:focus{
   border-color:var(--accent);
   outline:3px solid #BFE0DC;
   outline-offset:0;
 }
-
 .inp .u{
   position:absolute;
   right:13px;
@@ -251,19 +200,16 @@ h1{
   color:var(--muted);
   pointer-events:none;
 }
-
 .field.bad input{
   border-color:var(--warn);
   background:var(--warn-soft);
 }
-
 .err{
   color:var(--warn);
   font-size:.85rem;
   margin:5px 0 0;
   min-height:0;
 }
-
 .reset{
   background:none;
   border:0;
@@ -274,18 +220,15 @@ h1{
   font-size:.88rem;
   padding:4px 0;
 }
-
 .main-result{
   padding:4px 0 20px;
   border-bottom:1px solid var(--line);
   margin-bottom:18px;
 }
-
 .main-result .lbl{
   color:var(--muted);
   font-size:.95rem;
 }
-
 .big{
   font:600 clamp(2.3rem,7vw,3.4rem)/1.1 var(--serif);
   color:var(--accent);
@@ -293,35 +236,29 @@ h1{
   margin:4px 0;
   word-break:break-word;
 }
-
 .grid{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:14px;
 }
-
 .grid div{
   background:var(--bg);
   border-radius:10px;
   padding:12px 14px;
 }
-
 .grid dt{
   font-size:.82rem;
   color:var(--muted);
   margin:0;
 }
-
 .grid dd{
   margin:2px 0 0;
   font-weight:700;
   font-size:1.15rem;
 }
-
 .grid .wide{
   grid-column:1/-1;
 }
-
 .status{
   margin-top:14px;
   padding:12px 14px;
@@ -329,17 +266,14 @@ h1{
   font-size:.92rem;
   background:var(--accent-soft);
 }
-
 .status.warn{
   background:var(--warn-soft);
   color:var(--warn);
 }
-
 .empty{
   color:var(--muted);
   padding:12px 0;
 }
-
 .how{
   margin-top:20px;
   border-top:1px solid var(--line);
@@ -347,22 +281,18 @@ h1{
   font-size:.92rem;
   color:var(--muted);
 }
-
 .how h3{
   font-size:.98rem;
   color:var(--ink);
   margin:0 0 8px;
 }
-
 .how ol{
   padding-left:20px;
   margin:0;
 }
-
 .how li{
   margin-bottom:8px;
 }
-
 .how code{
   background:var(--bg);
   padding:1px 6px;
@@ -370,68 +300,52 @@ h1{
   color:var(--ink);
   font-size:.88em;
 }
-
 .legal{
   font-size:.82rem;
   color:var(--muted);
   margin-top:16px;
 }
-
-
 /* CONTENT */
-
 section.content{
   max-width:760px;
   margin-bottom:44px;
 }
-
 section.content h2{
   font:600 1.55rem/1.25 var(--serif);
   margin:0 0 12px;
 }
-
 section.content p{
   margin:0 0 14px;
 }
-
-
 /* FEATURES */
-
 .features{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:16px;
   margin-top:22px;
 }
-
 .feature{
   background:var(--surface);
   border:1px solid var(--line);
   border-radius:12px;
   padding:20px;
 }
-
 .feature h3{
   margin:0 0 7px;
   font-size:1rem;
 }
-
 .feature p{
   margin:0;
   color:var(--muted);
   font-size:.9rem;
 }
-
-
 /* SEO LINKS */
-
 .seo-links{
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:12px;
   margin-top:22px;
 }
-
 .seo-links a{
   display:block;
   padding:16px;
@@ -441,14 +355,10 @@ section.content p{
   text-decoration:none;
   background:var(--surface);
 }
-
 .seo-links a:hover{
   border-color:var(--accent);
 }
-
-
 /* SERVICES */
-
 .services{
   background:#15212B;
   color:#fff;
@@ -456,42 +366,35 @@ section.content p{
   padding:30px;
   margin-bottom:48px;
 }
-
 .services h2{
   font:600 1.65rem/1.25 var(--serif);
   margin:0 0 10px;
 }
-
 .services p{
   color:#D5DDE2;
   max-width:650px;
   margin:0 0 20px;
 }
-
 .service-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:14px;
   margin:22px 0;
 }
-
 .service-item{
   border:1px solid rgba(255,255,255,.14);
   background:rgba(255,255,255,.05);
   border-radius:10px;
   padding:16px;
 }
-
 .service-item strong{
   display:block;
   margin-bottom:5px;
 }
-
 .service-item span{
   color:#BFC9D0;
   font-size:.9rem;
 }
-
 .service-button{
   display:inline-block;
   background:#fff;
@@ -501,23 +404,17 @@ section.content p{
   border-radius:9px;
   font-weight:700;
 }
-
 .service-button:hover{
   background:#E3F2F0;
 }
-
-
 /* FAQ */
-
 .faq{
   border-top:1px solid var(--line);
 }
-
 details{
   border-bottom:1px solid var(--line);
   padding:14px 0;
 }
-
 summary{
   cursor:pointer;
   font-weight:600;
@@ -526,30 +423,23 @@ summary{
   justify-content:space-between;
   gap:12px;
 }
-
 summary::-webkit-details-marker{
   display:none;
 }
-
 summary::after{
   content:"+";
   color:var(--accent);
   font-size:1.3rem;
   line-height:1;
 }
-
 details[open] summary::after{
   content:"–";
 }
-
 details p{
   margin:10px 0 0;
   color:var(--muted);
 }
-
-
 /* FOOTER */
-
 footer{
   border-top:1px solid var(--line);
   padding:26px 0 40px;
@@ -557,616 +447,386 @@ footer{
   font-size:.85rem;
   background:var(--surface);
 }
-
 .footer-links{
   margin-top:8px;
 }
-
 .footer-links a{
   margin-right:14px;
 }
-
-
 @media(max-width:700px){
-
   .grid,
   .features,
   .seo-links{
     grid-template-columns:1fr;
   }
-
   .service-grid{
     grid-template-columns:1fr;
   }
-
   .panel{
     padding:20px;
   }
-
   .hero{
     padding-top:38px;
   }
 }
-
 @media(prefers-reduced-motion:reduce){
   html{
     scroll-behavior:auto;
   }
 }
-
 </style>
 </head>
-
-
 <body>
-
 <header class="top">
   <div class="wrap">
     <div class="brand">Margen<span>Lab</span></div>
   </div>
 </header>
-
-
 <main class="wrap">
-
-
   <!-- HERO -->
-
   <div class="hero">
-
-    <h1>
-      ¿Cuánto tengo que facturar para ganar lo que quiero?
-    </h1>
-
-    <p>
-      Indica cuánto quieres ganar al mes y cuánto te cuesta mantener tu actividad.
-      Te diremos cuánto necesitas facturar y cuántas ventas tienes que cerrar.
-      Gratis, sin registro y sin enviar tus datos a ningún sitio.
-    </p>
-
+<h1>
+  ¿Cuánto tengo que facturar para ganar lo que quiero?
+</h1>
+<p>
+  Indica cuánto quieres ganar al mes y cuánto te cuesta mantener tu actividad.
+  Te diremos cuánto necesitas facturar y cuántas ventas tienes que cerrar.
+  Gratis, sin registro y sin enviar tus datos a ningún sitio.
+</p>
   </div>
-
-
   <!-- ESPACIO PREPARADO PARA ADSENSE -->
-
   <div class="ad-slot" aria-hidden="true">
     <span>Anuncio</span>
   </div>
-
-
   <!-- CALCULADORA -->
-
   <div class="tool">
-
-    <section class="panel" aria-labelledby="t-datos">
-
-      <h2 id="t-datos">Tus datos</h2>
-
-
-      <div class="field" data-f="objetivo">
-
-        <label for="objetivo">
-          Beneficio mensual que quieres ganar
-
-          <span class="hint">
-            Lo que te queda después de pagar todos los gastos.
-          </span>
-
-        </label>
-
-        <div class="inp">
-
-          <input
-            id="objetivo"
-            inputmode="decimal"
-            autocomplete="off"
-            placeholder="2.000"
-            aria-describedby="e-objetivo"
-          >
-
-          <span class="u">€</span>
-
-        </div>
-
-        <p class="err" id="e-objetivo" role="alert"></p>
-
-      </div>
-
-
-      <div class="field" data-f="fijos">
-
-        <label for="fijos">
-
-          Gastos fijos mensuales
-
-          <span class="hint">
-            Cuota de autónomo, alquiler, software, seguros…
-          </span>
-
-        </label>
-
-        <div class="inp">
-
-          <input
-            id="fijos"
-            inputmode="decimal"
-            autocomplete="off"
-            placeholder="1.200"
-            aria-describedby="e-fijos"
-          >
-
-          <span class="u">€</span>
-
-        </div>
-
-        <p class="err" id="e-fijos" role="alert"></p>
-
-      </div>
-
-
-      <div class="field" data-f="variables">
-
-        <label for="variables">
-
-          Costes variables
-
-          <span class="hint">
-            Porcentaje del precio que se va en materiales, comisiones, envíos, etc.
-          </span>
-
-        </label>
-
-        <div class="inp">
-
-          <input
-            id="variables"
-            inputmode="decimal"
-            autocomplete="off"
-            placeholder="30"
-            aria-describedby="e-variables"
-          >
-
-          <span class="u">%</span>
-
-        </div>
-
-        <p class="err" id="e-variables" role="alert"></p>
-
-      </div>
-
-
-      <div class="field" data-f="precio">
-
-        <label for="precio">
-
-          Precio medio por venta
-
-          <span class="hint">
-            Lo que paga de media cada cliente.
-          </span>
-
-        </label>
-
-        <div class="inp">
-
-          <input
-            id="precio"
-            inputmode="decimal"
-            autocomplete="off"
-            placeholder="150"
-            aria-describedby="e-precio"
-          >
-
-          <span class="u">€</span>
-
-        </div>
-
-        <p class="err" id="e-precio" role="alert"></p>
-
-      </div>
-
-
-      <div class="field" data-f="cac">
-
-        <label for="cac">
-
-          Coste de adquisición por cliente
-
-          <span class="hint">
-            Lo que te cuesta conseguir un cliente: publicidad, comisiones…
-          </span>
-
-        </label>
-
-        <div class="inp">
-
-          <input
-            id="cac"
-            inputmode="decimal"
-            autocomplete="off"
-            placeholder="25"
-            aria-describedby="e-cac"
-          >
-
-          <span class="u">€</span>
-
-        </div>
-
-        <p class="err" id="e-cac" role="alert"></p>
-
-      </div>
-
-
-      <div class="field" data-f="minimo">
-
-        <label for="minimo">
-
-          Beneficio mínimo por venta
-          <small>(opcional)</small>
-
-          <span class="hint">
-            Lo mínimo que quieres ganar en cada venta tras captar al cliente.
-            Si lo dejas vacío, se usa 0 €.
-          </span>
-
-        </label>
-
-        <div class="inp">
-
-          <input
-            id="minimo"
-            inputmode="decimal"
-            autocomplete="off"
-            placeholder="0"
-            aria-describedby="e-minimo"
-          >
-
-          <span class="u">€</span>
-
-        </div>
-
-        <p class="err" id="e-minimo" role="alert"></p>
-
-      </div>
-
-
-      <button type="button" class="reset" id="reset">
-        Borrar todos los datos
-      </button>
-
-    </section>
-
-
-    <!-- RESULTADOS -->
-
-    <section class="panel" aria-labelledby="t-res" aria-live="polite">
-
-      <h2 id="t-res">Resultados</h2>
-
-      <div id="out">
-
-        <p class="empty">
-          Rellena los campos de la izquierda y verás aquí el resultado al instante.
-        </p>
-
-      </div>
-
-      <p class="legal">
-        Esta herramienta ofrece una estimación empresarial orientativa y no constituye
-        asesoramiento financiero, fiscal ni legal. Consulta con un profesional antes
-        de tomar decisiones.
-      </p>
-
-    </section>
-
+<section class="panel" aria-labelledby="t-datos">
+  <h2 id="t-datos">Tus datos</h2>
+  <div class="field" data-f="objetivo">
+    <label for="objetivo">
+      Beneficio mensual que quieres ganar
+      <span class="hint">
+        Lo que te queda después de pagar todos los gastos.
+      </span>
+    </label>
+    <div class="inp">
+      <input
+        id="objetivo"
+        inputmode="decimal"
+        autocomplete="off"
+        placeholder="2.000"
+        aria-describedby="e-objetivo"
+      >
+      <span class="u">€</span>
+    </div>
+    <p class="err" id="e-objetivo" role="alert"></p>
   </div>
-
-
+  <div class="field" data-f="fijos">
+    <label for="fijos">
+      Gastos fijos mensuales
+      <span class="hint">
+        Cuota de autónomo, alquiler, software, seguros…
+      </span>
+    </label>
+    <div class="inp">
+      <input
+        id="fijos"
+        inputmode="decimal"
+        autocomplete="off"
+        placeholder="1.200"
+        aria-describedby="e-fijos"
+      >
+      <span class="u">€</span>
+    </div>
+    <p class="err" id="e-fijos" role="alert"></p>
+  </div>
+  <div class="field" data-f="variables">
+    <label for="variables">
+      Costes variables
+      <span class="hint">
+        Porcentaje del precio que se va en materiales, comisiones, envíos, etc.
+      </span>
+    </label>
+    <div class="inp">
+      <input
+        id="variables"
+        inputmode="decimal"
+        autocomplete="off"
+        placeholder="30"
+        aria-describedby="e-variables"
+      >
+      <span class="u">%</span>
+    </div>
+    <p class="err" id="e-variables" role="alert"></p>
+  </div>
+  <div class="field" data-f="precio">
+    <label for="precio">
+      Precio medio por venta
+      <span class="hint">
+        Lo que paga de media cada cliente.
+      </span>
+    </label>
+    <div class="inp">
+      <input
+        id="precio"
+        inputmode="decimal"
+        autocomplete="off"
+        placeholder="150"
+        aria-describedby="e-precio"
+      >
+      <span class="u">€</span>
+    </div>
+    <p class="err" id="e-precio" role="alert"></p>
+  </div>
+  <div class="field" data-f="cac">
+    <label for="cac">
+      Coste de adquisición por cliente
+      <span class="hint">
+        Lo que te cuesta conseguir un cliente: publicidad, comisiones…
+      </span>
+    </label>
+    <div class="inp">
+      <input
+        id="cac"
+        inputmode="decimal"
+        autocomplete="off"
+        placeholder="25"
+        aria-describedby="e-cac"
+      >
+      <span class="u">€</span>
+    </div>
+    <p class="err" id="e-cac" role="alert"></p>
+  </div>
+  <div class="field" data-f="minimo">
+    <label for="minimo">
+      Beneficio mínimo por venta
+      <small>(opcional)</small>
+      <span class="hint">
+        Lo mínimo que quieres ganar en cada venta tras captar al cliente.
+        Si lo dejas vacío, se usa 0 €.
+      </span>
+    </label>
+    <div class="inp">
+      <input
+        id="minimo"
+        inputmode="decimal"
+        autocomplete="off"
+        placeholder="0"
+        aria-describedby="e-minimo"
+      >
+      <span class="u">€</span>
+    </div>
+    <p class="err" id="e-minimo" role="alert"></p>
+  </div>
+  <button type="button" class="reset" id="reset">
+    Borrar todos los datos
+  </button>
+</section>
+<!-- RESULTADOS -->
+<section class="panel" aria-labelledby="t-res" aria-live="polite">
+  <h2 id="t-res">Resultados</h2>
+  <div id="out">
+    <p class="empty">
+      Rellena los campos de la izquierda y verás aquí el resultado al instante.
+    </p>
+  </div>
+  <p class="legal">
+    Esta herramienta ofrece una estimación empresarial orientativa y no constituye
+    asesoramiento financiero, fiscal ni legal. Consulta con un profesional antes
+    de tomar decisiones.
+  </p>
+</section>
+  </div>
   <!-- ESPACIO PARA FUTURO ANUNCIO -->
-
   <div class="ad-slot" aria-hidden="true">
     <span>Anuncio</span>
   </div>
-
-
   <!-- EXPLICACIÓN -->
-
   <section class="content" aria-labelledby="t-intro">
-
-    <h2 id="t-intro">
-      ¿Cuánto necesitas facturar para conseguir el beneficio que quieres?
-    </h2>
-
+<h2 id="t-intro">
+  ¿Cuánto necesitas facturar para conseguir el beneficio que quieres?
+</h2>
+<p>
+  Muchos autónomos y pequeños negocios fijan sus precios mirando a la competencia
+  o por intuición. El resultado habitual: se factura bastante, pero queda poco.
+</p>
+<p>
+  La razón es que cada euro que entra no es beneficio. Una parte se va en costes
+  variables y otra sirve para cubrir los gastos fijos que tienes que pagar vendas
+  o no vendas.
+</p>
+<p>
+  MARGEN LAB trabaja al revés: parte del beneficio que quieres conseguir y calcula
+  qué nivel de facturación necesitas para alcanzarlo.
+</p>
+<div class="features">
+  <div class="feature">
+    <h3>Facturación objetivo</h3>
     <p>
-      Muchos autónomos y pequeños negocios fijan sus precios mirando a la competencia
-      o por intuición. El resultado habitual: se factura bastante, pero queda poco.
+      Descubre cuánto necesitas facturar cada mes para alcanzar tu beneficio.
     </p>
-
-    <p>
-      La razón es que cada euro que entra no es beneficio. Una parte se va en costes
-      variables y otra sirve para cubrir los gastos fijos que tienes que pagar vendas
-      o no vendas.
-    </p>
-
-    <p>
-      MARGEN LAB trabaja al revés: parte del beneficio que quieres conseguir y calcula
-      qué nivel de facturación necesitas para alcanzarlo.
-    </p>
-
-    <div class="features">
-
-      <div class="feature">
-
-        <h3>Facturación objetivo</h3>
-
-        <p>
-          Descubre cuánto necesitas facturar cada mes para alcanzar tu beneficio.
-        </p>
-
-      </div>
-
-
-      <div class="feature">
-
-        <h3>Margen</h3>
-
-        <p>
-          Comprueba cuánto queda de cada venta después de los costes variables.
-        </p>
-
-      </div>
-
-
-      <div class="feature">
-
-        <h3>Punto de equilibrio</h3>
-
-        <p>
-          Calcula cuánto necesitas vender para cubrir tus gastos.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- PÁGINAS SEO -->
-
-  <section class="content">
-
-    <h2>
-      Calcula cuánto necesitas facturar
-    </h2>
-
-    <p>
-      Consulta ejemplos según el beneficio mensual que quieras conseguir.
-      Después puedes utilizar la calculadora para introducir tus propios datos.
-    </p>
-
-
-    <div class="seo-links">
-
-      <a href="cuanto-facturar-para-ganar-2000.html">
-        Cuánto facturar para ganar 2.000 €
-      </a>
-
-      <a href="cuanto-facturar-para-ganar-3000.html">
-        Cuánto facturar para ganar 3.000 €
-      </a>
-
-      <a href="cuanto-facturar-para-ganar-5000.html">
-        Cuánto facturar para ganar 5.000 €
-      </a>
-
-      <a href="cuanto-facturar-para-ganar-10000.html">
-        Cuánto facturar para ganar 10.000 €
-      </a>
-
-    </div>
-
-  </section>
-
-
-  <!-- =====================================================
-       SERVICIOS
-       ===================================================== -->
-
-  <section class="services" id="servicios">
-
-    <h2>
-      ¿Quieres analizar tu negocio en profundidad?
-    </h2>
-
-    <p>
-      La calculadora te permite hacer una primera estimación.
-      Si quieres entender mejor tus números, MARGEN LAB también prepara
-      análisis personalizados de rentabilidad para autónomos y pequeños negocios.
-    </p>
-
-
-    <div class="service-grid">
-
-      <div class="service-item">
-
-        <strong>
-          Análisis de rentabilidad
-        </strong>
-
-        <span>
-          Revisamos tus principales números y calculamos margen, beneficio,
-          punto de equilibrio y facturación necesaria.
-        </span>
-
-      </div>
-
-
-      <div class="service-item">
-
-        <strong>
-          Informe personalizado
-        </strong>
-
-        <span>
-          Recibirás tus resultados organizados de forma clara para que puedas
-          entender dónde está el dinero de tu negocio.
-        </span>
-
-      </div>
-
-    </div>
-
-
-    <a
-      class="service-button"
-      href="analisis-rentabilidad.html"
-    >
-      Ver el análisis de rentabilidad
-    </a>
-
-  </section>
-
-
-  <!-- FAQ -->
-
-  <section class="content" aria-labelledby="t-faq">
-
-    <h2 id="t-faq">
-      Preguntas frecuentes
-    </h2>
-
-
-    <div class="faq">
-
-      <details>
-
-        <summary>
-          ¿Qué son los gastos fijos?
-        </summary>
-
-        <p>
-          Son los gastos que pagas cada mes independientemente de lo que vendas:
-          cuota de autónomos, alquiler, suscripciones, gestoría, seguros o sueldos fijos.
-        </p>
-
-      </details>
-
-
-      <details>
-
-        <summary>
-          ¿Qué son los costes variables?
-        </summary>
-
-        <p>
-          Son los que crecen con cada venta: materiales, comisiones de plataformas
-          o pasarelas de pago, envíos o subcontratas.
-        </p>
-
-      </details>
-
-
-      <details>
-
-        <summary>
-          ¿El beneficio objetivo es antes o después de impuestos?
-        </summary>
-
-        <p>
-          La calculadora no aplica impuestos. Si quieres calcular un beneficio
-          neto después de IRPF, IVA u otros tributos, deberás ajustar el objetivo
-          con ayuda de un profesional.
-        </p>
-
-      </details>
-
-
-      <details>
-
-        <summary>
-          ¿Qué es el coste máximo de adquisición?
-        </summary>
-
-        <p>
-          Es lo máximo que puedes gastar para conseguir un cliente y seguir
-          obteniendo el beneficio por venta que hayas establecido.
-        </p>
-
-      </details>
-
-
-      <details>
-
-        <summary>
-          ¿Qué pasa si mis costes variables son del 100% o más?
-        </summary>
-
-        <p>
-          Cada venta no deja margen suficiente para cubrir los gastos fijos
-          ni generar beneficio. Tendrás que revisar precios o costes.
-        </p>
-
-      </details>
-
-
-      <details>
-
-        <summary>
-          ¿Se guardan mis datos?
-        </summary>
-
-        <p>
-          Los datos introducidos en la calculadora se utilizan para realizar
-          los cálculos en tu navegador. Google Analytics puede recopilar datos
-          de uso de la web de acuerdo con su configuración.
-        </p>
-
-      </details>
-
-    </div>
-
-  </section>
-
-
-</main>
-
-
-<footer>
-
-  <div class="wrap">
-
-    © 2026 MARGEN LAB · Herramientas para entender la rentabilidad de tu negocio.
-
-    <div class="footer-links">
-
-      <a href="analisis-rentabilidad.html">
-        Servicios
-      </a>
-
-      <a href="aviso-legal.html">
-        Aviso legal
-      </a>
-
-      <a href="politica-privacidad.html">
-        Privacidad
-      </a>
-
-      <a href="politica-cookies.html">
-        Cookies
-      </a>
-
-    </div>
-
   </div>
-
+  <div class="feature">
+    <h3>Margen</h3>
+    <p>
+      Comprueba cuánto queda de cada venta después de los costes variables.
+    </p>
+  </div>
+  <div class="feature">
+    <h3>Punto de equilibrio</h3>
+    <p>
+      Calcula cuánto necesitas vender para cubrir tus gastos.
+    </p>
+  </div>
+</div>
+  </section>
+  <!-- PÁGINAS SEO -->
+  <section class="content">
+<h2>
+  Calcula cuánto necesitas facturar
+</h2>
+<p>
+  Consulta ejemplos según el beneficio mensual que quieras conseguir.
+  Después puedes utilizar la calculadora para introducir tus propios datos.
+</p>
+<div class="seo-links">
+  <a href="cuanto-facturar-para-ganar-2000.html">
+    Cuánto facturar para ganar 2.000 €
+  </a>
+  <a href="cuanto-facturar-para-ganar-3000.html">
+    Cuánto facturar para ganar 3.000 €
+  </a>
+  <a href="cuanto-facturar-para-ganar-5000.html">
+    Cuánto facturar para ganar 5.000 €
+  </a>
+  <a href="cuanto-facturar-para-ganar-10000.html">
+    Cuánto facturar para ganar 10.000 €
+  </a>
+</div>
+  </section>
+  <!-- SERVICIOS -->
+  <section class="services" id="servicios">
+<h2>
+  ¿Quieres analizar tu negocio en profundidad?
+</h2>
+<p>
+  La calculadora te permite hacer una primera estimación.
+  Si quieres entender mejor tus números, MARGEN LAB también prepara
+  análisis personalizados de rentabilidad para autónomos y pequeños negocios.
+</p>
+<div class="service-grid">
+  <div class="service-item">
+    <strong>
+      Análisis de rentabilidad
+    </strong>
+    <span>
+      Revisamos tus principales números y calculamos margen, beneficio,
+      punto de equilibrio y facturación necesaria.
+    </span>
+  </div>
+  <div class="service-item">
+    <strong>
+      Informe personalizado
+    </strong>
+    <span>
+      Recibirás tus resultados organizados de forma clara para que puedas
+      entender dónde está el dinero de tu negocio.
+    </span>
+  </div>
+</div>
+<a
+  class="service-button"
+  href="analisis-rentabilidad.html"
+>
+  Ver el análisis de rentabilidad
+</a>
+  </section>
+  <!-- FAQ -->
+  <section class="content" aria-labelledby="t-faq">
+<h2 id="t-faq">
+  Preguntas frecuentes
+</h2>
+<div class="faq">
+  <details>
+    <summary>
+      ¿Qué son los gastos fijos?
+    </summary>
+    <p>
+      Son los gastos que pagas cada mes independientemente de lo que vendas:
+      cuota de autónomos, alquiler, suscripciones, gestoría, seguros o sueldos fijos.
+    </p>
+  </details>
+  <details>
+    <summary>
+      ¿Qué son los costes variables?
+    </summary>
+    <p>
+      Son los que crecen con cada venta: materiales, comisiones de plataformas
+      o pasarelas de pago, envíos o subcontratas.
+    </p>
+  </details>
+  <details>
+    <summary>
+      ¿El beneficio objetivo es antes o después de impuestos?
+    </summary>
+    <p>
+      La calculadora no aplica impuestos. Si quieres calcular un beneficio
+      neto después de IRPF, IVA u otros tributos, deberás ajustar el objetivo
+      con ayuda de un profesional.
+    </p>
+  </details>
+  <details>
+    <summary>
+      ¿Qué es el coste máximo de adquisición?
+    </summary>
+    <p>
+      Es lo máximo que puedes gastar para conseguir un cliente y seguir
+      obteniendo el beneficio por venta que hayas establecido.
+    </p>
+  </details>
+  <details>
+    <summary>
+      ¿Qué pasa si mis costes variables son del 100% o más?
+    </summary>
+    <p>
+      Cada venta no deja margen suficiente para cubrir los gastos fijos
+      ni generar beneficio. Tendrás que revisar precios o costes.
+    </p>
+  </details>
+  <details>
+    <summary>
+      ¿Se guardan mis datos?
+    </summary>
+    <p>
+      Los datos introducidos en la calculadora se utilizan para realizar
+      los cálculos en tu navegador. Google Analytics puede recopilar datos
+      de uso de la web de acuerdo con su configuración.
+    </p>
+  </details>
+</div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+© 2026 MARGEN LAB · Herramientas para entender la rentabilidad de tu negocio.
+<div class="footer-links">
+  <a href="analisis-rentabilidad.html">
+    Servicios
+  </a>
+  <a href="aviso-legal.html">
+    Aviso legal
+  </a>
+  <a href="politica-privacidad.html">
+    Privacidad
+  </a>
+  <a href="politica-cookies.html">
+    Cookies
+  </a>
+</div>
+  </div>
 </footer>
-
-
 <script>
-
 (function(){
-
   var ids=[
     "objetivo",
     "fijos",
@@ -1175,17 +835,11 @@ footer{
     "cac",
     "minimo"
   ];
-
   var el={};
-
   ids.forEach(function(i){
     el[i]=document.getElementById(i);
   });
-
-
   var out=document.getElementById("out");
-
-
   var eur=new Intl.NumberFormat(
     "es-ES",
     {
@@ -1193,8 +847,6 @@ footer{
       currency:"EUR"
     }
   );
-
-
   var pct=new Intl.NumberFormat(
     "es-ES",
     {
@@ -1203,180 +855,99 @@ footer{
       maximumFractionDigits:1
     }
   );
-
-
   var num=new Intl.NumberFormat("es-ES");
-
-
   function parse(s){
-
     s=String(s)
       .trim()
       .replace(/\s|€|%/g,"");
-
     if(s===""){
       return null;
     }
-
     if(s.indexOf(",")>-1){
-
       s=s
         .replace(/\./g,"")
         .replace(",",".");
         
     }
     else if(/^\d{1,3}(\.\d{3})+$/.test(s)){
-
       s=s.replace(/\./g,"");
-
     }
-
     return /^-?\d*\.?\d+$/.test(s)
       ? parseFloat(s)
       : NaN;
   }
-
-
   function setErr(id,msg){
-
     var f=el[id].closest(".field");
-
     document.getElementById("e-"+id).textContent=msg||"";
-
     f.classList.toggle("bad",!!msg);
-
     el[id].setAttribute(
       "aria-invalid",
       msg ? "true" : "false"
     );
   }
-
-
   function calc(){
-
     var v={};
     var ok=true;
     var missing=false;
-
-
     ids.forEach(function(id){
-
       var raw=el[id].value;
       var n=parse(raw);
       var msg="";
-
-
       if(id==="minimo" && n===null){
-
         n=0;
-
       }
-
-
       if(n===null){
-
         missing=true;
-
       }
-
       else if(isNaN(n)){
-
         msg="Escribe un número válido, por ejemplo 1500 o 12,5.";
-
       }
-
       else if(n<0){
-
         msg="El valor no puede ser negativo.";
-
       }
-
       else if(id==="variables" && n>=100){
-
         msg="Debe ser menor que 100%. Con 100% o más no queda margen para ganar nada.";
-
       }
-
       else if(id==="precio" && n===0){
-
         msg="El precio medio debe ser mayor que 0 para poder calcular las ventas.";
-
       }
-
-
       if(msg){
-
         ok=false;
-
       }
-
-
       setErr(id,msg);
-
       v[id]=n;
-
     });
-
-
     if(!ok){
-
       out.innerHTML=
         '<p class="empty">Corrige los campos marcados para ver el resultado.</p>';
-
       return;
-
     }
-
-
     if(missing){
-
       out.innerHTML=
         '<p class="empty">Rellena los campos de la izquierda y verás aquí el resultado al instante.</p>';
-
       return;
-
     }
-
-
     var cv=v.variables/100;
-
     var margen=1-cv;
-
-
     if(margen<=0){
-
       return;
-
     }
-
-
     var fact=(v.objetivo+v.fijos)/margen;
-
     var ventas=Math.ceil(
       fact/v.precio-1e-9
     );
-
-
     var cacMax=
       v.precio-
       v.precio*cv-
       v.minimo;
-
-
     var st;
-
-
     if(cacMax<0){
-
       st=
         '<div class="status warn">'+
         'Con este precio y estos costes variables, cada venta pierde dinero antes de captar al cliente. Sube el precio o reduce los costes variables.'+
         '</div>';
-
     }
-
     else if(v.cac>cacMax){
-
       st=
         '<div class="status warn">'+
         'Tu coste de adquisición actual ('+
@@ -1385,11 +956,8 @@ footer{
         eur.format(cacMax)+
         '). Cada cliente te deja menos beneficio del que quieres.'+
         '</div>';
-
     }
-
     else{
-
       st=
         '<div class="status">'+
         'Tu coste de adquisición ('+
@@ -1400,31 +968,20 @@ footer{
         eur.format(cacMax-v.cac)+
         ' por cliente.'+
         '</div>';
-
     }
-
-
     out.innerHTML=
-
       '<div class="main-result">'+
-
         '<div class="lbl">Necesitas facturar al mes</div>'+
-
         '<div class="big">'+
           eur.format(fact)+
         '</div>'+
-
         '<div class="lbl">'+
           'para ganar '+
           eur.format(v.objetivo)+
           ' al mes'+
         '</div>'+
-
       '</div>'+
-
-
       '<dl class="grid">'+
-
         '<div>'+
           '<dt>Ventas o clientes necesarios</dt>'+
           '<dd>'+
@@ -1432,43 +989,29 @@ footer{
             ' al mes'+
           '</dd>'+
         '</div>'+
-
-
         '<div>'+
           '<dt>Beneficio objetivo</dt>'+
           '<dd>'+
             eur.format(v.objetivo)+
           '</dd>'+
         '</div>'+
-
-
         '<div>'+
           '<dt>Margen sobre ventas</dt>'+
           '<dd>'+
             pct.format(margen)+
           '</dd>'+
         '</div>'+
-
-
         '<div>'+
           '<dt>Coste máximo de adquisición</dt>'+
           '<dd>'+
             eur.format(cacMax)+
           '</dd>'+
         '</div>'+
-
       '</dl>'+
-
-
       st+
-
-
       '<div class="how">'+
-
         '<h3>Cómo se han calculado</h3>'+
-
         '<ol>'+
-
           '<li>'+
             '<b>Margen:</b> '+
             '<code>1 − '+
@@ -1480,8 +1023,6 @@ footer{
             num.format(Math.round(margen*100)/100)+
             ' € para cubrir gastos fijos y beneficio.'+
           '</li>'+
-
-
           '<li>'+
             '<b>Facturación:</b> '+
             '<code>('+
@@ -1494,8 +1035,6 @@ footer{
             eur.format(fact)+
             '</code>'+
           '</li>'+
-
-
           '<li>'+
             '<b>Ventas:</b> '+
             '<code>'+
@@ -1513,8 +1052,6 @@ footer{
             num.format(ventas)+
             '</b>.'+
           '</li>'+
-
-
           '<li>'+
             '<b>Coste máximo de adquisición:</b> '+
             '<code>'+
@@ -1529,57 +1066,34 @@ footer{
             eur.format(cacMax)+
             '</code>'+
           '</li>'+
-
         '</ol>'+
-
-
         '<p style="margin:10px 0 0">'+
           'La facturación no incluye el gasto en captación de clientes. '+
           'Si no está ya dentro de tus gastos fijos, añádelo a ellos para '+
           'un cálculo más realista.'+
         '</p>'+
-
       '</div>';
-
   }
-
-
   ids.forEach(function(id){
-
     el[id].addEventListener(
       "input",
       calc
     );
-
   });
-
-
   document
     .getElementById("reset")
     .addEventListener("click",function(){
-
       ids.forEach(function(id){
-
         el[id].value="";
-
         setErr(id,"");
-
       });
-
-
       out.innerHTML=
         '<p class="empty">'+
         'Rellena los campos de la izquierda y verás aquí el resultado al instante.'+
         '</p>';
-
-
       el.objetivo.focus();
-
     });
-
 })();
-
 </script>
-
 </body>
 </html>
