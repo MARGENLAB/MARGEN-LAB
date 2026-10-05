@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://margenlab.github.io/MARGEN-LAB/sitemap.xml
+Sitemap: https://margenlab.es/sitemap.xml
