@@ -1,23 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
-    <loc>https://margenlab.github.io/MARGEN-LAB/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <loc>https://margenlab.es/</loc>
   </url>
+
   <url>
-    <loc>https://margenlab.github.io/MARGEN-LAB/cuanto-facturar-para-ganar-2000.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://margenlab.es/cuanto-facturar-para-ganar-2000.html</loc>
   </url>
+
   <url>
-    <loc>https://margenlab.github.io/MARGEN-LAB/cuanto-facturar-para-ganar-3000.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://margenlab.es/cuanto-facturar-para-ganar-3000.html</loc>
   </url>
+
   <url>
-    <loc>https://margenlab.github.io/MARGEN-LAB/cuanto-facturar-para-ganar-5000.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://margenlab.es/cuanto-facturar-para-ganar-5000.html</loc>
   </url>
+
+  <url>
+    <loc>https://margenlab.es/cuanto-facturar-para-ganar-10000.html</loc>
+  </url>
+
+  <url>
+    <loc>https://margenlab.es/analisis-rentabilidad.html</loc>
+  </url>
+
+  <url>
+    <loc>https://margenlab.es/aviso-legal.html</loc>
+  </url>
+
+  <url>
+    <loc>https://margenlab.es/politica-privacidad.html</loc>
+  </url>
+
+  <url>
+    <loc>https://margenlab.es/politica-cookies.html</loc>
+  </url>
+
 </urlset>
