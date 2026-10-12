@@ -322,6 +322,14 @@ section.content p{
   margin:0 0 14px;
 }
 
+/* CONTENT QUALITY: METHOD AND EXAMPLE */
+.calculation-example{border:1px solid var(--line);border-radius:12px;padding:20px;margin:18px 0;background:var(--surface)}
+.calculation-example h3{margin:0 0 10px;font-size:1rem}
+.calculation-example ul{padding-left:20px}
+.calculation-example li{margin:7px 0}
+.formula-box{background:#E3F2F0;border-left:4px solid var(--accent);border-radius:6px;padding:12px 14px;margin:12px 0;color:var(--ink);overflow-wrap:anywhere}
+.method-note{color:var(--muted);font-size:.92rem}
+
 /* FEATURES */
 .features{
   display:grid;
@@ -716,6 +724,36 @@ footer{
     </div>
   </section>
 
+  <!-- METODOLOGÍA Y EJEMPLO PRÁCTICO -->
+  <section class="content" aria-labelledby="t-metodo">
+    <h2 id="t-metodo">Cómo calcula MARGEN LAB la facturación necesaria</h2>
+    <p>La estimación parte del beneficio mensual que quieres conseguir, los gastos fijos, los costes variables y el precio medio por venta. También descuenta el coste de adquisición que introduces para estimar cuánto aporta cada venta después de captar al cliente.</p>
+    <h3>Qué debes introducir</h3>
+    <ul>
+      <li><strong>Beneficio objetivo:</strong> el beneficio mensual que quieres obtener, antes de impuestos personales y otros conceptos que no hayas incluido en tus gastos.</li>
+      <li><strong>Gastos fijos:</strong> alquiler, seguros, programas, gestoría, cuotas y otros costes mensuales que no dependen directamente del número de ventas.</li>
+      <li><strong>Costes variables:</strong> el porcentaje de cada venta que se consume en materiales, comisiones, envíos u otros costes variables.</li>
+      <li><strong>Precio medio:</strong> el ingreso medio por venta, expresado sin IVA.</li>
+      <li><strong>Coste de adquisición (CAC):</strong> el coste medio de conseguir un cliente. Si una campaña cuesta 250 € y consigue 10 clientes, el CAC es 25 € por cliente.</li>
+    </ul>
+    <h3>Ejemplo práctico con números</h3>
+    <p>Imagina un pequeño negocio que quiere obtener 2.000 € al mes, tiene 1.200 € de gastos fijos, vende a un precio medio de 150 €, soporta costes variables del 30 % y gasta 25 € en captar cada cliente. Para simplificar, suponemos que cada cliente realiza una venta y que todos los importes están expresados sin IVA.</p>
+    <div class="calculation-example">
+      <h3>1. Calcula cuánto aporta cada venta</h3>
+      <p>El 30 % de 150 € son 45 € de costes variables.</p>
+      <div class="formula-box"><strong>150 € − 45 € − 25 € de CAC = 80 €</strong></div>
+      <p>Cada venta aporta 80 € para cubrir los gastos fijos y alcanzar el beneficio objetivo.</p>
+      <h3>2. Calcula las ventas necesarias</h3>
+      <div class="formula-box"><strong>(2.000 € de beneficio + 1.200 € de gastos fijos) ÷ 80 € = 40 ventas</strong></div>
+      <h3>3. Calcula la facturación estimada</h3>
+      <div class="formula-box"><strong>40 ventas × 150 € = 6.000 € al mes, sin IVA</strong></div>
+      <p class="method-note">Es un ejemplo ilustrativo, no una previsión garantizada. El resultado real depende de que los costes y el precio medio introducidos representen la actividad del negocio.</p>
+    </div>
+    <h3>Cómo interpretar el resultado</h3>
+    <p>La facturación no es lo mismo que el beneficio: primero hay que cubrir los costes variables de cada venta, el coste de captar clientes y los gastos fijos. Por eso, un negocio que factura más no necesariamente gana más. Si el resultado exige un número de ventas poco realista, revisa el precio medio, los costes, el CAC o el beneficio objetivo antes de tomar decisiones.</p>
+    <p>La herramienta ofrece una estimación orientativa. No calcula el IRPF, el impuesto sobre sociedades ni costes que no hayas incluido, y no sustituye una revisión de la contabilidad real. Introduce los datos sin IVA y evita contar dos veces un coste que ya esté incluido en otra partida.</p>
+  </section>
+
   <!-- PÁGINAS SEO -->
   <section class="content">
 
@@ -1045,11 +1083,19 @@ footer{
       return;
     }
 
-    var fact=(v.objetivo+v.fijos)/margen;
+    var aportacionVenta=(v.precio*margen)-v.cac;
+
+    if(aportacionVenta<=0){
+      out.innerHTML=
+        '<div class="status warn">Con estos datos, cada venta no deja una aportación positiva después de costes variables y captación. Reduce el CAC, revisa el precio o los costes antes de calcular una facturación objetivo.</div>';
+      return;
+    }
 
     var ventas=Math.ceil(
-      fact/v.precio-1e-9
+      (v.objetivo+v.fijos)/aportacionVenta-1e-9
     );
+
+    var fact=ventas*v.precio;
 
     var cacMax=
       v.precio-
@@ -1168,33 +1214,42 @@ footer{
 
           '<li>'+
             '<b>Facturación:</b> '+
-            '<code>('+
-            eur.format(v.objetivo)+
-            ' + '+
-            eur.format(v.fijos)+
-            ') ÷ '+
-            pct.format(margen)+
-            ' = '+
-            eur.format(fact)+
-            '</code>'+
+          '<code>'+
+          num.format(ventas)+
+          ' ventas × '+
+          eur.format(v.precio)+
+          ' = '+
+          eur.format(fact)+
+          '</code>'+
           '</li>'+
 
           '<li>'+
-            '<b>Ventas:</b> '+
-            '<code>'+
-            eur.format(fact)+
-            ' ÷ '+
-            eur.format(v.precio)+
-            ' = '+
-            (fact/v.precio).toLocaleString(
-              "es-ES",
-              {
-                maximumFractionDigits:2
-              }
-            )+
-            '</code>, redondeado siempre hacia arriba: <b>'+
-            num.format(ventas)+
-            '</b>.'+
+            '<b>Aportación por venta:</b> '+
+          '<code>'+
+          eur.format(v.precio)+
+          ' − ('+
+          eur.format(v.precio)+
+          ' × '+
+          pct.format(cv)+
+          ') − '+
+          eur.format(v.cac)+
+          ' = '+
+          eur.format(aportacionVenta)+
+          '</code> después de costes variables y captación.'+
+          '</li>'+
+          '<li>'+
+          '<b>Ventas necesarias:</b> '+
+          '<code>('+
+          eur.format(v.objetivo)+
+          ' + '+
+          eur.format(v.fijos)+
+          ') ÷ '+
+          eur.format(aportacionVenta)+
+          ' = '+
+          ((v.objetivo+v.fijos)/aportacionVenta).toLocaleString("es-ES",{maximumFractionDigits:2})+
+          '</code>, redondeado hacia arriba: <b>'+
+          num.format(ventas)+
+          '</b>.'+
           '</li>'+
 
           '<li>'+
@@ -1215,9 +1270,8 @@ footer{
         '</ol>'+
 
         '<p style="margin:10px 0 0">'+
-          'La facturación no incluye el gasto en captación de clientes. '+
-          'Si no está ya dentro de tus gastos fijos, añádelo a ellos para '+
-          'un cálculo más realista.'+
+          'El coste de adquisición se descuenta en la aportación por venta. '+
+          'No lo incluyas una segunda vez en los gastos fijos.'+
         '</p>'+
 
       '</div>';
