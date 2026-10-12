@@ -504,7 +504,7 @@ footer{
     <p>
       Indica cuánto quieres ganar al mes y cuánto te cuesta mantener tu actividad.
       Te diremos cuánto necesitas facturar y cuántas ventas tienes que cerrar.
-      Gratis, sin registro y sin enviar tus datos a ningún sitio.
+      Gratis y sin registro. Los cálculos se realizan en tu navegador.
     </p>
   </div>
 
@@ -1040,21 +1040,20 @@ footer{
 
     var cv=v.variables/100;
     var margen=1-cv;
+    var contribucion=v.precio*margen-v.cac;
+    var cacMax=v.precio*margen-v.minimo;
 
-    if(margen<=0){
+    if(contribucion<=0){
+      out.innerHTML=
+        '<div class="status warn">Con este precio, los costes variables y el coste de adquisición, cada venta no deja margen para cubrir los gastos fijos y alcanzar el beneficio objetivo. Revisa el precio o reduce los costes.</div>';
       return;
     }
 
-    var fact=(v.objetivo+v.fijos)/margen;
-
     var ventas=Math.ceil(
-      fact/v.precio-1e-9
+      (v.objetivo+v.fijos)/contribucion-1e-9
     );
-
-    var cacMax=
-      v.precio-
-      v.precio*cv-
-      v.minimo;
+    var fact=ventas*v.precio;
+    var beneficioReal=ventas*contribucion-v.fijos;
 
     var st;
 
@@ -1062,7 +1061,7 @@ footer{
 
       st=
         '<div class="status warn">'+
-        'Con este precio y estos costes variables, cada venta pierde dinero antes de captar al cliente. Sube el precio o reduce los costes variables.'+
+        'El beneficio mínimo por venta que has indicado supera el margen disponible antes del coste de adquisición. Puedes revisar ese mínimo, el precio o los costes.'+
         '</div>';
 
     }
@@ -1106,7 +1105,7 @@ footer{
         '</div>'+
 
         '<div class="lbl">'+
-          'para ganar '+
+          'para alcanzar un beneficio objetivo de '+
           eur.format(v.objetivo)+
           ' al mes'+
         '</div>'+
@@ -1124,16 +1123,16 @@ footer{
         '</div>'+
 
         '<div>'+
-          '<dt>Beneficio objetivo</dt>'+
+          '<dt>Beneficio estimado tras gastos fijos</dt>'+
           '<dd>'+
-            eur.format(v.objetivo)+
+            eur.format(beneficioReal)+
           '</dd>'+
         '</div>'+
 
         '<div>'+
-          '<dt>Margen sobre ventas</dt>'+
+          '<dt>Contribución neta sobre ventas</dt>'+
           '<dd>'+
-            pct.format(margen)+
+            pct.format(contribucion/v.precio)+
           '</dd>'+
         '</div>'+
 
@@ -1155,46 +1154,40 @@ footer{
         '<ol>'+
 
           '<li>'+
-            '<b>Margen:</b> '+
+            '<b>Margen tras costes variables:</b> '+
             '<code>1 − '+
             pct.format(cv)+
             ' = '+
             pct.format(margen)+
-            '</code>. '+
-            'De cada euro facturado te quedan '+
-            num.format(Math.round(margen*100)/100)+
-            ' € para cubrir gastos fijos y beneficio.'+
+            '</code>. Después se descuenta el coste de adquisición por venta.'+
           '</li>'+
 
           '<li>'+
-            '<b>Facturación:</b> '+
+            '<b>Contribución por venta:</b> '+
+            '<code>'+
+            eur.format(v.precio)+
+            ' × '+
+            pct.format(margen)+
+            ' − '+
+            eur.format(v.cac)+
+            ' = '+
+            eur.format(contribucion)+
+            '</code>. Es lo que queda por venta tras costes variables y captación.'+
+          '</li>'+
+
+          '<li>'+
+            '<b>Ventas necesarias:</b> '+
             '<code>('+
             eur.format(v.objetivo)+
             ' + '+
             eur.format(v.fijos)+
             ') ÷ '+
-            pct.format(margen)+
+            eur.format(contribucion)+
             ' = '+
-            eur.format(fact)+
-            '</code>'+
-          '</li>'+
-
-          '<li>'+
-            '<b>Ventas:</b> '+
-            '<code>'+
-            eur.format(fact)+
-            ' ÷ '+
-            eur.format(v.precio)+
-            ' = '+
-            (fact/v.precio).toLocaleString(
-              "es-ES",
-              {
-                maximumFractionDigits:2
-              }
-            )+
-            '</code>, redondeado siempre hacia arriba: <b>'+
+            ((v.objetivo+v.fijos)/contribucion).toLocaleString("es-ES",{maximumFractionDigits:2})+
+            '</code>, redondeado hacia arriba: <b>'+
             num.format(ventas)+
-            '</b>.'+
+            '</b>. La facturación estimada es el número de ventas multiplicado por el precio medio.'+
           '</li>'+
 
           '<li>'+
@@ -1215,9 +1208,8 @@ footer{
         '</ol>'+
 
         '<p style="margin:10px 0 0">'+
-          'La facturación no incluye el gasto en captación de clientes. '+
-          'Si no está ya dentro de tus gastos fijos, añádelo a ellos para '+
-          'un cálculo más realista.'+
+          'El cálculo descuenta el coste de adquisición en cada venta y supone una venta por cliente. '+
+          'No incluye IVA ni impuestos sobre el beneficio.'+
         '</p>'+
 
       '</div>';
