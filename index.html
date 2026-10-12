@@ -1130,9 +1130,9 @@ footer{
         '</div>'+
 
         '<div>'+
-          '<dt>Margen sobre ventas</dt>'+
+          '<dt>Contribución neta sobre ventas</dt>'+
           '<dd>'+
-            pct.format(margen)+
+            pct.format(contribucion/v.precio)+
           '</dd>'+
         '</div>'+
 
@@ -1154,46 +1154,40 @@ footer{
         '<ol>'+
 
           '<li>'+
-            '<b>Margen:</b> '+
+            '<b>Margen tras costes variables:</b> '+
             '<code>1 − '+
             pct.format(cv)+
             ' = '+
             pct.format(margen)+
-            '</code>. '+
-            'De cada euro facturado te quedan '+
-            num.format(Math.round(margen*100)/100)+
-            ' € para cubrir gastos fijos y beneficio.'+
+            '</code>. Después se descuenta el coste de adquisición por venta.'+
           '</li>'+
 
           '<li>'+
-            '<b>Facturación:</b> '+
+            '<b>Contribución por venta:</b> '+
+            '<code>'+
+            eur.format(v.precio)+
+            ' × '+
+            pct.format(margen)+
+            ' − '+
+            eur.format(v.cac)+
+            ' = '+
+            eur.format(contribucion)+
+            '</code>. Es lo que queda por venta tras costes variables y captación.'+
+          '</li>'+
+
+          '<li>'+
+            '<b>Ventas necesarias:</b> '+
             '<code>('+
             eur.format(v.objetivo)+
             ' + '+
             eur.format(v.fijos)+
             ') ÷ '+
-            pct.format(margen)+
+            eur.format(contribucion)+
             ' = '+
-            eur.format(fact)+
-            '</code>'+
-          '</li>'+
-
-          '<li>'+
-            '<b>Ventas:</b> '+
-            '<code>'+
-            eur.format(fact)+
-            ' ÷ '+
-            eur.format(v.precio)+
-            ' = '+
-            (fact/v.precio).toLocaleString(
-              "es-ES",
-              {
-                maximumFractionDigits:2
-              }
-            )+
-            '</code>, redondeado siempre hacia arriba: <b>'+
+            ((v.objetivo+v.fijos)/contribucion).toLocaleString("es-ES",{maximumFractionDigits:2})+
+            '</code>, redondeado hacia arriba: <b>'+
             num.format(ventas)+
-            '</b>.'+
+            '</b>. La facturación estimada es el número de ventas multiplicado por el precio medio.'+
           '</li>'+
 
           '<li>'+
