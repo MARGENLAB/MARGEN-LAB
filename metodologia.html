@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cómo calculamos la rentabilidad y la facturación | MARGEN LAB</title>
+<meta name="description" content="Consulta las fórmulas, supuestos, ejemplos y límites de la calculadora de MARGEN LAB para estimar ventas, facturación, margen y beneficio mensual.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://margenlab.es/metodologia.html">
+<script>
+if (window.location.hostname === "margenlab.github.io") {
+  window.location.replace("https://margenlab.es" + window.location.pathname.replace("/MARGEN-LAB", "") + window.location.search + window.location.hash);
+}
+</script>
+<meta property="og:title" content="Cómo calculamos la rentabilidad y la facturación | MARGEN LAB">
+<meta property="og:description" content="Fórmulas transparentes, ejemplo numérico y límites de la calculadora de MARGEN LAB.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://margenlab.es/metodologia.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8812392454700290" crossorigin="anonymous"></script>
+<style>
+:root{--bg:#f5f7f8;--surface:#fff;--ink:#15212b;--muted:#5b6975;--line:#dce3e8;--accent:#0e6b64;--soft:#e3f2f0}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}a{color:var(--accent)}.wrap{max-width:850px;margin:auto;padding:0 20px}header,footer{background:var(--surface);border-bottom:1px solid var(--line);padding:18px 0}footer{border-top:1px solid var(--line);border-bottom:0;margin-top:50px;padding:28px 0 40px;color:var(--muted);font-size:.9rem}.brand{font-weight:750;letter-spacing:.02em}main{padding:42px 0 10px}h1,h2,h3{line-height:1.25}h1{font-size:clamp(2rem,5vw,3rem);letter-spacing:-.03em;margin:0 0 14px}h2{font-size:1.55rem;margin-top:36px}h3{font-size:1.08rem;margin-top:22px}.lead{font-size:1.12rem;color:var(--muted)}section,.callout{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px;margin:20px 0}.callout{background:var(--soft);border:0}.formula{font-weight:650;overflow-wrap:anywhere}.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;background:#fff}th,td{text-align:left;vertical-align:top;border:1px solid var(--line);padding:11px}th{background:#eef2f3}.small{color:var(--muted);font-size:.92rem}.button{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;padding:12px 17px;border-radius:8px;font-weight:700}.footer-links{margin-top:10px}.footer-links a{margin-right:14px}@media(max-width:600px){section,.callout{padding:17px}th,td{padding:8px;font-size:.92rem}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a class="brand" href="https://margenlab.es/" aria-label="MARGEN LAB, inicio">MARGEN LAB</a></div></header>
+<main class="wrap">
+<article>
+<h1>Cómo calculamos la facturación y la rentabilidad</h1>
+<p class="lead">Esta página explica las fórmulas que utiliza MARGEN LAB, qué significan sus resultados y qué costes debes comprobar antes de tomar decisiones con ellos. El objetivo es que puedas revisar el cálculo y sustituir los ejemplos por tus propios datos.</p>
+
+<section>
+<h2>1. Las fórmulas utilizadas</h2>
+<p>Primero calculamos cuánto aporta una venta después de descontar los costes variables y el coste de adquisición atribuible a esa venta.</p>
+<p class="callout formula">Aportación por venta = precio medio − costes variables por venta − CAC por venta</p>
+<p>Después sumamos el beneficio mensual deseado y los gastos fijos, y dividimos esa cantidad por la aportación de cada venta.</p>
+<p class="callout formula">Ventas necesarias = redondeo hacia arriba de (beneficio objetivo + gastos fijos) ÷ aportación por venta</p>
+<p class="callout formula">Facturación estimada = ventas necesarias × precio medio por venta</p>
+<p>Si la aportación por venta es cero o negativa, el objetivo no se puede alcanzar aumentando únicamente el volumen: primero habría que revisar el precio, los costes variables o el coste de adquisición.</p>
+</section>
+
+<section>
+<h2>2. Ejemplo completo, paso a paso</h2>
+<p>Supongamos un negocio que quiere obtener 2.000 € mensuales, tiene 500 € de gastos fijos, vende a 100 € por operación, soporta costes variables del 20 % y paga 10 € de adquisición por cliente. En este ejemplo, cada cliente realiza una venta.</p>
+<table><thead><tr><th>Concepto</th><th>Cálculo</th><th>Resultado</th></tr></thead><tbody>
+<tr><td>Costes variables</td><td>100 € × 20 %</td><td>20 € por venta</td></tr>
+<tr><td>Aportación después de variables</td><td>100 € − 20 €</td><td>80 €</td></tr>
+<tr><td>Aportación después del CAC</td><td>80 € − 10 €</td><td>70 € por venta</td></tr>
+<tr><td>Ventas necesarias</td><td>(2.000 € + 500 €) ÷ 70 €</td><td>36 ventas</td></tr>
+<tr><td>Facturación estimada</td><td>36 × 100 €</td><td>3.600 € sin IVA</td></tr>
+<tr><td>Resultado antes de costes excluidos</td><td>36 × 70 € − 500 €</td><td>2.020 €</td></tr>
+</tbody></table>
+<p class="small">El resultado supera en 20 € el objetivo porque las ventas son unidades completas y se redondea hacia arriba. Es un ejemplo matemático, no una predicción de ventas ni una garantía de ingresos.</p>
+</section>
+
+<section>
+<h2>3. Cómo interpretar los datos de entrada</h2>
+<ul>
+<li><strong>Beneficio objetivo:</strong> la cantidad mensual que quieres que quede después de los costes incluidos en el modelo. No equivale necesariamente al dinero neto que recibe el titular.</li>
+<li><strong>Gastos fijos:</strong> alquiler, software, seguros, gestoría y otros costes mensuales que no dependen directamente de cada venta. Incluye solo conceptos que no hayas contabilizado en otra parte.</li>
+<li><strong>Costes variables:</strong> comisiones, materiales, fabricación, envío u otros costes que aumentan con las ventas. Introduce el porcentaje sobre el precio de venta sin IVA.</li>
+<li><strong>CAC:</strong> coste medio de conseguir un cliente nuevo. Si un cliente realiza varias compras, no descuentes automáticamente el CAC completo en cada operación; distribúyelo de acuerdo con las ventas medias por cliente y con tu modelo de adquisición.</li>
+<li><strong>Precio medio:</strong> utiliza el ingreso medio por venta sin IVA y evita mezclar productos con precios muy distintos sin calcular una media representativa.</li>
+</ul>
+</section>
+
+<section>
+<h2>4. Qué no incluye automáticamente el cálculo</h2>
+<p>La estimación depende de los datos que introduzcas. No incorpora por sí sola cualquier gasto que hayas omitido, impuestos sobre el beneficio, cuotas o remuneración del titular, devoluciones, impagos, estacionalidad, financiación, inventario ni límites de capacidad operativa. Algunos conceptos pueden estar incluidos en tus gastos fijos o variables; evita contabilizarlos dos veces.</p>
+<p>El IVA se trata por separado: para estudiar el margen se trabaja normalmente con importes sin IVA. La situación fiscal concreta depende de la actividad y debe revisarse con un profesional cuando sea necesario.</p>
+</section>
+
+<section>
+<h2>5. Rutina de revisión para usar la estimación</h2>
+<ol>
+<li>Utiliza datos reales de varios meses, no solo el mejor mes de ventas.</li>
+<li>Compara el CAC estimado con el coste real de captación y distingue clientes nuevos de recurrentes.</li>
+<li>Calcula el punto de equilibrio —ventas necesarias para cubrir los costes incluidos sin buscar beneficio adicional— antes de fijar una meta comercial.</li>
+<li>Comprueba si puedes atender el volumen de ventas estimado sin contratar personal ni asumir costes adicionales no contemplados.</li>
+<li>Al cierre de cada mes, compara la estimación con los resultados reales y actualiza precios, costes y gastos.</li>
+</ol>
+</section>
+
+<div class="callout"><strong>Importante:</strong> MARGEN LAB ofrece herramientas orientativas para comprender los números de un negocio. Los resultados no constituyen asesoramiento fiscal, contable, financiero ni legal y no garantizan un resultado económico.</div>
+<p><a class="button" href="https://margenlab.es/">Calcular mi facturación</a></p>
+<h2>Continúa con ejemplos por objetivo</h2>
+<ul>
+<li><a href="https://margenlab.es/cuanto-facturar-para-ganar-2000.html">Cómo calcular la facturación para ganar 2.000 € al mes</a></li>
+<li><a href="https://margenlab.es/cuanto-facturar-para-ganar-3000.html">Cómo calcular la facturación para ganar 3.000 € al mes</a></li>
+<li><a href="https://margenlab.es/cuanto-facturar-para-ganar-5000.html">Cómo calcular la facturación para ganar 5.000 € al mes</a></li>
+<li><a href="https://margenlab.es/cuanto-facturar-para-ganar-10000.html">Cómo calcular la facturación para ganar 10.000 € al mes</a></li>
+</ul>
+<p class="small">Revisión de contenido: octubre de 2026. MARGEN LAB revisará esta metodología cuando cambien las fórmulas o el funcionamiento de la calculadora.</p>
+</article>
+</main>
+<footer><div class="wrap">© 2026 MARGEN LAB · Herramientas y análisis de rentabilidad para negocios.<div class="footer-links"><a href="https://margenlab.es/">Calculadora</a><a href="https://margenlab.es/analisis-rentabilidad.html">Análisis de rentabilidad</a><a href="https://margenlab.es/aviso-legal.html">Aviso legal</a><a href="https://margenlab.es/politica-privacidad.html">Privacidad</a><a href="https://margenlab.es/politica-cookies.html">Cookies</a></div></div></footer>
+</body>
+</html>
