@@ -8,6 +8,13 @@
 <meta name="robots" content="index,follow">
 <!-- DOMINIO PRINCIPAL -->
 <link rel="canonical" href="https://margenlab.es/">
+
+<script>
+// Redirige la URL antigua de GitHub Pages al dominio principal.
+if (window.location.hostname === "margenlab.github.io") {
+  window.location.replace("https://margenlab.es" + window.location.pathname.replace("/MARGEN-LAB", "") + window.location.search + window.location.hash);
+}
+</script>
 <meta property="og:title" content="Calculadora de facturación y rentabilidad | MARGEN LAB">
 <meta property="og:description" content="Calcula cuánto necesitas facturar para alcanzar tu beneficio objetivo.">
 <meta property="og:type" content="website">
