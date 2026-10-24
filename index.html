@@ -133,6 +133,33 @@ h1{
   font-size:1.08rem;
   margin:0;
 }
+.tools-promo{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  padding:16px 18px;
+  margin:0 0 26px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:var(--surface);
+}
+.tools-promo p{margin:0;color:var(--muted);font-size:.93rem}
+.tools-promo strong{display:block;color:var(--ink);font-size:1rem;margin-bottom:3px}
+.tools-promo a{
+  flex-shrink:0;
+  display:inline-block;
+  padding:10px 14px;
+  border-radius:8px;
+  background:var(--accent);
+  color:#fff;
+  font-weight:700;
+  text-decoration:none;
+}
+.tools-promo a:hover{filter:brightness(.93)}
+@media(max-width:560px){
+  .tools-promo{align-items:flex-start;flex-direction:column}
+}
 
 /* Los anuncios se gestionan mediante el código de AdSense. */
 
@@ -511,6 +538,15 @@ footer{
       Gratis, sin registro y sin enviar tus datos a ningún sitio.
     </p>
   </div>
+
+  <!-- ACCESO DESTACADO A HERRAMIENTAS GRATUITAS -->
+  <section class="tools-promo" aria-label="Más herramientas gratuitas">
+    <div>
+      <strong>¿Quieres analizar más aspectos de tu negocio?</strong>
+      <p>Calcula tu punto de equilibrio, compara precios y planifica tus ventas en una sola página.</p>
+    </div>
+    <a href="https://margenlab.es/herramientas.html">Ver todas las herramientas</a>
+  </section>
 
   <!-- CALCULADORA -->
   <div class="tool">
